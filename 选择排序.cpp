@@ -1,0 +1,31 @@
+#include<conio.h>
+#include<stdio.h>
+main()
+{
+      int i,j,n,q;
+      printf("请输入要排序的个数n\nn=");
+      scanf("%d",&n);
+      int a[n+1];
+      printf("请依次输入这%d个数\n",n);
+      for(i=1;i<=n;i++)
+           scanf("%d",&a[i]);
+      for(i=1;i<=n-1;i++)
+      {
+                         a[0]=a[n];
+                         q=n;
+                         for(j=n-1;j>=i;j--)
+                         {
+                                              if(a[j]<a[0])
+                                              {
+                                                             a[0]=a[j];
+                                                             q=j;
+                                              }
+                         }
+                                              a[q]=a[i];
+                                              a[i]=a[0];
+      }
+      printf("\n\n");
+      for(i=1;i<=n;i++)
+           printf("%d\t",a[i]);
+      getch();
+}

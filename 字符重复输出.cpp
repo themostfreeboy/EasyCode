@@ -1,0 +1,29 @@
+#include<conio.h>
+#include<stdio.h>
+#include<math.h>
+main()
+{
+      int z,i=2,j;
+      printf("请输入显示次数\n");
+      scanf("%d",&z);
+      printf("\n请输入字符\n");
+      char a[2*2*2*2*2*2*2*2*2*2*2*2*2*2*2];
+      scanf("%c",&a[0]);
+      scanf("%c",&a[1]);
+      while(a[i-1]!='\n')
+      {
+              scanf("%c",&a[i]);
+              i++;      
+      }
+      for(j=1;j<=z;j++)
+      {
+           for(i=0;i<2*2*2*2*2*2*2*2*2*2*2*2*2*2*2;i++)
+           {
+                   if(a[i]!='\0')
+                           printf("%c",a[i]);
+                   if(a[i]=='\0')
+                           break;
+           }
+      }
+      getch();
+}
